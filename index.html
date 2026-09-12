@@ -1,0 +1,883 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Mummy & Papu Anniversary ❤️</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ==================== MUSIC ==================== -->
+
+    <audio id="backgroundMusic" loop>
+        <source src="music/anniversary.mp3" type="audio/mpeg">
+    </audio>
+
+    <button id="musicButton" class="music-button">
+        🎵 Play Music
+    </button>
+    <div id="musicVisualizer" class="music-visualizer">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+</div>
+<button id="themeToggle" class="theme-toggle">
+    🌙 Night Mode
+</button>
+
+    <!-- ==================== PASSWORD SCREEN ==================== -->
+
+    <div id="lockScreen" class="lock-screen">
+
+        <div class="lock-box">
+
+            <div class="lock-icon">
+                🔐
+            </div>
+
+            <h1>
+                A Special Surprise ❤️
+            </h1>
+
+            <p>
+                Enter the password to unlock your surprise
+            </p>
+
+            <input
+                type="password"
+                id="passwordInput"
+                placeholder="Enter Password"
+            >
+
+            <button onclick="checkPassword()">
+                Unlock ❤️
+            </button>
+
+            <p id="errorMessage"></p>
+
+        </div>
+
+    </div>
+
+
+    <!-- ==================== MAIN WEBSITE ==================== -->
+
+    <div id="mainWebsite" style="display: none;">
+
+
+        <!-- ==================== WELCOME SCREEN ==================== -->
+
+        <div id="welcomeScreen" class="welcome-screen">
+
+            <div class="welcome-content">
+
+                <div class="welcome-heart">
+                    ❤️
+                </div>
+
+                <h1>
+                    Welcome Mummy & Papu ❤️
+                </h1>
+
+                <p>
+                    A Special Surprise Made With Love ❤️
+                </p>
+
+                <button id="enterWebsite">
+                    Enter Your Surprise ✨
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- ==================== NAVIGATION ==================== -->
+
+        <nav class="nav-menu">
+
+            <a href="#top">
+                🏠 Home
+            </a>
+
+            <a href="#memories">
+                📸 Memories
+            </a>
+
+            <a href="#journey">
+                💖 Journey
+            </a>
+
+            <a href="#reasons">
+                ❤️ Reasons
+            </a>
+
+            <a href="#letterSection">
+                💌 Letter
+            </a>
+
+            <a href="#celebration">
+                🎉 Celebration
+            </a>
+
+        </nav>
+
+
+        <!-- ==================== MAIN CONTAINER ==================== -->
+
+        <div class="container" id="top">
+
+
+            <!-- ==================== MAIN TITLE ==================== -->
+
+            <div class="heart">
+                ❤️
+            </div>
+
+            <h1>
+                Happy Anniversary Mummy & Papu ❤️
+            </h1>
+
+            <p class="subtitle">
+                Celebrating Your Beautiful Love Story 💕
+            </p>
+
+
+            <!-- ==================== COUNTDOWN ==================== -->
+
+            <div class="countdown">
+
+                <h2>
+                    Countdown to 16 April ❤️
+                </h2>
+
+                <div class="countdown-container">
+
+                    <div class="time-box">
+                        <span id="days">0</span>
+                        <small>Days</small>
+                    </div>
+
+                    <div class="time-box">
+                        <span id="hours">0</span>
+                        <small>Hours</small>
+                    </div>
+
+                    <div class="time-box">
+                        <span id="minutes">0</span>
+                        <small>Minutes</small>
+                    </div>
+
+                    <div class="time-box">
+                        <span id="seconds">0</span>
+                        <small>Seconds</small>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- ==================== SPECIAL MESSAGE ==================== -->
+
+            <section class="message-section">
+
+                <h2>
+                    Dear Mummy & Papu ❤️
+                </h2>
+
+                <p>
+                    Your love, care and support have always made
+                    our family beautiful.
+                </p>
+
+                <p>
+                    You both are not just husband and wife,
+                    but the heart of our family. ❤️
+                </p>
+
+                <p>
+                    Thank you for filling our lives with happiness,
+                    memories and endless love. 💕
+                </p>
+
+                <p>
+                    Happy Anniversary to the most amazing
+                    Mummy & Papu! ❤️
+                </p>
+
+            </section>
+
+
+ <!-- =========================
+     BEAUTIFUL MEMORIES
+========================= -->
+
+<section class="gallery-section" id="memories">
+
+    <h2>📸 Beautiful Memories</h2>
+
+    <div class="gallery-wrapper">
+
+        <button id="prevPhoto" class="gallery-button">
+            ❮
+        </button>
+
+        <div class="gallery">
+
+            <img src="images/image1.jpeg"
+                 class="gallery-photo active"
+                 alt="Memory 1">
+
+            <img src="images/image2.jpeg"
+                 class="gallery-photo"
+                 alt="Memory 2">
+
+            <img src="images/image3.jpeg"
+                 class="gallery-photo"
+                 alt="Memory 3">
+
+        </div>
+
+        <button id="nextPhoto" class="gallery-button">
+            ❯
+        </button>
+
+    </div>
+
+    <!-- PHOTO CAPTION -->
+
+    <div id="photoCaption" class="photo-caption">
+        A beautiful moment that will always stay in our hearts ❤️
+    </div>
+
+    <div class="photo-counter">
+        <span id="photoNumber">1</span> / 3
+    </div>
+
+    <div class="photo-dots">
+
+        <button class="photo-dot active-dot"
+                data-photo="0"></button>
+
+        <button class="photo-dot"
+                data-photo="1"></button>
+
+        <button class="photo-dot"
+                data-photo="2"></button>
+
+    </div>
+
+</section>
+
+
+            <!-- ==================== JOURNEY ==================== -->
+
+            <section class="timeline-section" id="journey">
+
+                <h2>
+                    💖 Their Beautiful Journey
+                </h2>
+
+                <div class="timeline">
+
+
+                    <div class="timeline-item">
+
+                        <div class="timeline-icon">
+                            ❤️
+                        </div>
+
+                        <h3>
+                            The Beginning
+                        </h3>
+
+                        <p>
+                            Every beautiful story has a beginning,
+                            and yours started with two people finding
+                            each other. ❤️
+                        </p>
+
+                    </div>
+
+
+                    <div class="timeline-item">
+
+                        <div class="timeline-icon">
+                            💕
+                        </div>
+
+                        <h3>
+                            Growing Together
+                        </h3>
+
+                        <p>
+                            Through every happiness and every challenge,
+                            you both continued to stand together.
+                        </p>
+
+                    </div>
+
+
+                    <div class="timeline-item">
+
+                        <div class="timeline-icon">
+                            👨‍👩‍👦
+                        </div>
+
+                        <h3>
+                            Building A Family
+                        </h3>
+
+                        <p>
+                            Together you created a beautiful family
+                            filled with love, care and unforgettable memories.
+                        </p>
+
+                    </div>
+
+
+                    <div class="timeline-item">
+
+                        <div class="timeline-icon">
+                            ♾️
+                        </div>
+
+                        <h3>
+                            Forever Together
+                        </h3>
+
+                        <p>
+                            May your journey continue forever with
+                            happiness, laughter and endless love. ❤️
+                        </p>
+
+                    </div>
+
+
+                </div>
+
+            </section>
+            <!-- =========================
+     OUR FAMILY MEMORIES
+========================= -->
+
+<section class="family-memories-section">
+
+    <h2>🏡 Our Family Memories ❤️</h2>
+
+    <p class="family-intro">
+        Some moments become memories that stay in our hearts forever. 💕
+    </p>
+
+    <div class="family-memory-container">
+
+        <div class="family-memory-card">
+            <div class="memory-icon">❤️</div>
+            <h3>A Beautiful Beginning</h3>
+            <p>
+                Every beautiful family story starts with two people
+                choosing to walk through life together. ❤️
+            </p>
+        </div>
+
+        <div class="family-memory-card">
+            <div class="memory-icon">🏡</div>
+            <h3>Building Our Home</h3>
+            <p>
+                Together you created a home filled with love,
+                laughter and countless memories. 🏡💕
+            </p>
+        </div>
+
+        <div class="family-memory-card">
+            <div class="memory-icon">👨‍👩‍👦</div>
+            <h3>Our Family</h3>
+            <p>
+                Your love became the foundation of our family
+                and made every ordinary moment special. ❤️
+            </p>
+        </div>
+
+        <div class="family-memory-card">
+            <div class="memory-icon">♾️</div>
+            <h3>Forever Together</h3>
+            <p>
+                Through every chapter, your journey continues
+                with love, laughter and togetherness. ♾️❤️
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+
+            <!-- ==================== REASONS ==================== -->
+
+            <section class="reasons-section" id="reasons">
+
+                <h2>
+                    ❤️ Why We Love You Both
+                </h2>
+
+                <div class="reasons-container">
+
+
+                    <div class="reason-card">
+
+                        <div class="reason-icon">
+                            ❤️
+                        </div>
+
+                        <h3>
+                            Your Love
+                        </h3>
+
+                        <p>
+                            Your love for each other makes our
+                            family stronger and happier every day.
+                        </p>
+
+                    </div>
+
+
+                    <div class="reason-card">
+
+                        <div class="reason-icon">
+                            🤗
+                        </div>
+
+                        <h3>
+                            Your Care
+                        </h3>
+
+                        <p>
+                            You always care for everyone and make
+                            everyone feel special.
+                        </p>
+
+                    </div>
+
+
+                    <div class="reason-card">
+
+                        <div class="reason-icon">
+                            😊
+                        </div>
+
+                        <h3>
+                            Your Smile
+                        </h3>
+
+                        <p>
+                            Your smiles make our home feel warm,
+                            peaceful and happy.
+                        </p>
+
+                    </div>
+
+
+                    <div class="reason-card">
+
+                        <div class="reason-icon">
+                            🌟
+                        </div>
+
+                        <h3>
+                            Your Support
+                        </h3>
+
+                        <p>
+                            Your support gives us strength and
+                            confidence to move forward.
+                        </p>
+
+                    </div>
+
+
+                </div>
+
+            </section>
+
+
+            <!-- ==================== SMALL SURPRISE ==================== -->
+
+            <section class="surprise-section">
+
+                <h2>
+                    🎁 A Small Surprise
+                </h2>
+
+                <p>
+                    Click the button below for a special message ❤️
+                </p>
+
+                <button id="surpriseButton">
+                    Open Surprise 🎁
+                </button>
+
+                <div id="surpriseMessage" class="surprise-message">
+                </div>
+
+            </section>
+
+
+            <!-- ==================== LETTER ==================== -->
+
+            <section class="letter-section" id="letterSection">
+
+                <h2>
+                    💌 A Letter For Mummy & Papu
+                </h2>
+
+                <p class="letter-intro">
+                    There is something I want to say to you both... ❤️
+                </p>
+
+
+                <div id="envelope" class="envelope">
+
+                    💌
+
+                    <p>
+                        Click to Open
+                    </p>
+
+                </div>
+
+
+                <div id="letterContent" class="letter">
+
+                    <p>
+                        Dear Mummy & Papu,
+                    </p>
+
+                    <p>
+                        You both are the most important people in
+                        my life. The love and care you give to our
+                        family means more than words can explain.
+                    </p>
+
+                    <p>
+                        I may not always say it, but I am truly
+                        grateful for everything you do for me and
+                        for our family.
+                    </p>
+
+                    <p>
+                        Your journey together is something very
+                        special, and I hope it continues with
+                        happiness, laughter and love forever. ❤️
+                    </p>
+
+                    <p>
+                        Happy Anniversary Mummy & Papu! 🎉❤️
+                    </p>
+
+                    <p class="signature">
+                        With lots of love,<br>
+                        Rishu ❤️
+                    </p>
+
+                </div>
+
+            </section>
+
+
+            <!-- ==================== FINAL SURPRISE ==================== -->
+
+            <section class="final-section">
+
+                <h2>
+                    ✨ One Last Surprise ✨
+                </h2>
+
+                <p>
+                    Are you ready?
+                </p>
+
+                <button id="finalButton">
+                    Open Final Surprise ❤️
+                </button>
+
+
+                <div id="finalMessage" class="final-message">
+
+                    <div class="final-heart">
+                        ❤️
+                    </div>
+
+                    <h1>
+                        Mummy & Papu ❤️
+                    </h1>
+
+                    <p>
+                        You both are the reason our family is
+                        filled with love, happiness and beautiful memories.
+                    </p>
+
+                    <p>
+                        May you always stay together,
+                        keep smiling and keep loving each other. 💕
+                    </p>
+
+                    <h2>
+                        HAPPY ANNIVERSARY! 🎉❤️
+                    </h2>
+
+                </div>
+
+            </section>
+
+
+            <!-- ==================== CELEBRATION ==================== -->
+
+            <section class="celebration-section" id="celebration">
+
+                <h2>
+                    🎉 Celebration Time 🎉
+                </h2>
+
+                <p>
+                    Let's celebrate the beautiful bond
+                    of Mummy & Papu! ❤️
+                </p>
+
+                <button id="celebrationButton">
+                    Start Celebration 🎉
+                </button>
+
+
+                <div
+                    id="celebrationMessage"
+                    class="celebration-message"
+                >
+
+                    <div class="celebration-heart">
+                        ❤️
+                    </div>
+
+                    <h1>
+                        Happy Anniversary Mummy & Papu! 🎉
+                    </h1>
+
+                    <p>
+                        Wishing you both a lifetime of happiness,
+                        love and beautiful memories together. 💕
+                    </p>
+
+                    <p>
+                        ❤️ Forever & Always ❤️
+                    </p>
+
+                </div>
+
+            </section>
+            <!-- ==================== LOVE METER ==================== -->
+
+<section class="love-meter-section">
+
+    <h2>
+        ❤️ Mummy & Papu Love Meter ❤️
+    </h2>
+
+    <p>
+        Let's see how much love is in the family...
+    </p>
+
+    <div class="love-meter">
+
+        <div id="loveMeterFill" class="love-meter-fill">
+            ❤️
+        </div>
+
+    </div>
+
+    <div id="lovePercent" class="love-percent">
+        0%
+    </div>
+
+    <button id="loveMeterButton">
+        Measure Love ❤️
+    </button>
+
+    <div id="loveMeterMessage" class="love-meter-message">
+    </div>
+
+</section>
+<!-- ==================== CINEMATIC REVEAL ==================== -->
+
+<section class="cinematic-section">
+
+    <h2>🎬 One More Special Moment</h2>
+
+    <p>For the two most special people in my life ❤️</p>
+
+    <button id="cinematicButton">
+        Open Special Moment ✨
+    </button>
+
+</section>
+
+
+<!-- CINEMATIC SCREEN -->
+
+<div id="cinematicScreen" class="cinematic-screen">
+
+    <div class="cinematic-content">
+
+        <div class="cinematic-heart">
+            ❤️
+        </div>
+
+        <h1>
+            Mummy & Papu
+        </h1>
+
+        <h2>
+            Your Love Is Our Home 🏠
+        </h2>
+
+        <p>
+            Thank you for making our family
+            full of love, happiness and beautiful memories. ❤️
+        </p>
+
+        <div class="cinematic-final">
+            Forever & Always ♾️
+        </div>
+
+        <button id="closeCinematic">
+            Close ❤️
+        </button>
+
+    </div>
+
+    <!-- =========================
+     SPECIAL WISH GENERATOR
+========================= -->
+
+<section class="wish-section">
+
+    <h2>💌 A Special Wish For You</h2>
+
+    <p id="wishText">
+        Click the button to reveal a special wish ❤️
+    </p>
+
+    <button id="wishButton">
+        ✨ Generate Wish
+    </button>
+
+</section>
+<!-- =========================
+     FINAL GRAND SURPRISE
+========================= -->
+
+<section class="grand-surprise-section">
+
+    <h2>🎁 One Last Surprise</h2>
+
+    <p>
+        Mummy & Papu, this one is especially for you... ❤️
+    </p>
+
+    <button id="grandSurpriseButton">
+        Open Your Final Surprise ✨
+    </button>
+
+</section>
+
+<div id="grandSurpriseScreen" class="grand-surprise-screen">
+
+    <div class="grand-surprise-content">
+
+        <div class="grand-heart">❤️</div>
+
+        <h1>Happy Anniversary</h1>
+
+        <h2>Mummy & Papu ❤️</h2>
+
+        <p>
+            Your love is the most beautiful part of our family.
+            May your journey together always be filled with
+            happiness, laughter and countless memories. 💕
+        </p>
+
+        <div class="forever-text">
+            Together Forever ♾️
+        </div>
+
+        <button id="closeGrandSurprise">
+            Close ❤️
+        </button>
+
+    </div>
+
+</div>
+
+            <!-- ==================== FOOTER ==================== -->
+
+            <footer class="final-footer">
+
+                <div class="footer-heart">
+                    ❤️
+                </div>
+
+                <h2>
+                    Made With Love
+                </h2>
+
+                <p>
+                    For the most special Mummy & Papu ❤️
+                </p>
+
+                <p class="footer-signature">
+                    — Rishu ❤️
+                </p>
+
+                <p class="footer-date">
+                    Forever & Always ♾️
+                </p>
+
+            </footer>
+
+
+        </div>
+
+
+        <!-- ==================== BACK TO TOP ==================== -->
+
+        <button id="backToTop" class="back-to-top">
+            ⬆️
+        </button>
+
+
+    </div>
+<!-- FULLSCREEN PHOTO VIEWER -->
+
+<div id="photoViewer" class="photo-viewer">
+
+    <button id="closePhotoViewer" class="close-photo">
+        ✕
+    </button>
+
+    <img id="viewerImage" src="" alt="Memory">
+
+</div>
+
+    <!-- ==================== JAVASCRIPT ==================== -->
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
